@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Made by Tigz</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Hearts Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            position: relative;
+            height: 100vh;
+        }
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: red;
+            opacity: 0.8;
+            pointer-events: none; /* Allow clicks on buttons */
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(100vh); }
+        }
+        .container {
+            position: relative;
+            z-index: 1; /* Ensure buttons are above the hearts */
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <script>
+        const createHeart = () => {
+            const heart = document.createElement('div');
+            heart.textContent = '❤️'; // Heart emoji
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * window.innerWidth + 'px'; // Random horizontal position
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random fall duration (2s to 5s)
+
+            document.body.appendChild(heart);
+
+            // Remove heart after it falls past the screen
+            setTimeout(() => {
+                heart.remove();
+            }, 5000); // Adjust time for how long the heart is visible
+        };
+
+        setInterval(createHeart, 300); // Adjust frequency of hearts falling
+    </script>
+</body>
+</html>
+
+    <h1>Made by Tigz</h1>
+    <a href="page1.html" class="button">Poem</a>
+    <a href="page2.html" class="button">Poem Ideas</a>
+    <a href="page3.html" class="button">For Kayzha</a>
+    <a href="page4.html" class="button">Click me</a>
+</body>
+<h1> i made this because i couldnt sleep.
+[insert magical sparkly wand noises] </h1>
+
+<h1> sparkle sparkle </h1>
+
+</html>

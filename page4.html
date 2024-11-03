@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 4</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Binary Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', monospace;
+        }
+        .binary {
+            position: absolute;
+            white-space: nowrap;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const binaryNumbers = ['0', '1'];
+        const createBinary = () => {
+            const binaryElement = document.createElement('div');
+            const randomBinary = binaryNumbers[Math.floor(Math.random() * binaryNumbers.length)];
+            binaryElement.textContent = randomBinary;
+            binaryElement.style.fontSize = Math.random() * 20 + 10 + 'px'; // Random size between 10px and 30px
+            binaryElement.style.left = Math.random() * window.innerWidth + 'px'; // Random horizontal position
+            binaryElement.classList.add('binary');
+            document.body.appendChild(binaryElement);
+
+            // Remove the binary number after it falls past the screen
+            setTimeout(() => {
+                binaryElement.remove();
+            }, 5000); // Adjust time for how long the number is visible
+
+            // Set animation duration randomly
+            const duration = Math.random() * 3 + 2; // Between 2 and 5 seconds
+            binaryElement.style.animationDuration = duration + 's';
+        };
+
+        setInterval(createBinary, 200); // Adjust frequency of numbers falling
+    </script>
+	<h1> can't stop it if you tried </h1>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        button {
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            position: absolute; /* Position it absolutely */
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chasing Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        button {
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            position: absolute; /* Position it absolutely */
+        }
+    </style>
+</head>
+<body>
+    <button id="chasingButton">Click to stop Tigz love</button>
+
+    <script>
+        const button = document.getElementById('chasingButton');
+
+        // Move the button away from the cursor
+        const moveButton = (event) => {
+            const buttonRect = button.getBoundingClientRect();
+            const buttonWidth = buttonRect.width;
+            const buttonHeight = buttonRect.height;
+
+            // Calculate the distance between the cursor and the button
+            const buttonX = buttonRect.left + buttonWidth / 2;
+            const buttonY = buttonRect.top + buttonHeight / 2;
+            const distanceX = event.clientX - buttonX;
+            const distanceY = event.clientY - buttonY;
+            const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+
+            // If the cursor is close enough, move the button away
+            if (distance < 100) { // Adjust this value for sensitivity
+                const moveX = (distanceX / distance) * 50; // Move the button away
+                const moveY = (distanceY / distance) * 50;
+
+                // Set the new position
+                let newX = buttonX - moveX - buttonWidth / 2;
+                let newY = buttonY - moveY - buttonHeight / 2;
+
+                // Ensure the button stays within the viewport
+                newX = Math.max(0, Math.min(newX, window.innerWidth - buttonWidth));
+                newY = Math.max(0, Math.min(newY, window.innerHeight - buttonHeight));
+
+                button.style.left = newX + 'px';
+                button.style.top = newY + 'px';
+            }
+        };
+
+        // Listen for mouse movement
+        document.addEventListener('mousemove', moveButton);
+
+        // Initial position
+        button.style.left = (window.innerWidth / 2 - 50) + 'px';
+        button.style.top = (window.innerHeight / 2 - 25) + 'px';
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
+
+    <a href="index.html" class="button">Back to Home</a>
+</body>
+</html>

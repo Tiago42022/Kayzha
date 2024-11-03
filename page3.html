@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title><a href="index.html" class="button">Kayzha</a> 
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+	 <h1>This is how much</h1
+</head>
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Binary Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', monospace;
+        }
+        .binary {
+            position: absolute;
+            white-space: nowrap;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+    <title>Falling Hearts Animation</title>
+    <style>
+        body {
+            margin: 100;
+            overflow: hidden;
+            background-color: black;
+            position: top;
+            height: 200vh;
+        }
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: red;
+            opacity: 0.8;
+            pointer-events: none; /* Allow clicks on buttons */
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(100vh); }
+        }
+        .container {
+            position: relative;
+            z-index: 1; /* Ensure buttons are above the hearts */
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <script>
+        const createHeart = () => {
+            const heart = document.createElement('div');
+            heart.textContent = '❤️'; // Heart emoji
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * window.innerWidth + 'px'; // Random horizontal position
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random fall duration (2s to 5s)
+
+            document.body.appendChild(heart);
+
+            // Remove heart after it falls past the screen
+            setTimeout(() => {
+                heart.remove();
+            }, 5000); // Adjust time for how long the heart is visible
+        };
+
+        setInterval(createHeart, 300); // Adjust frequency of hearts falling
+    </script>
+</body> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growing Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+        }
+        button {
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.2s ease; /* Smooth transition for size change */
+            background-color:red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <button id="growingButton">I Love You!</button>
+
+    <script>
+        const button = document.getElementById('growingButton');
+        let scale = 1; // Initial scale factor
+
+        button.addEventListener('click', () => {
+            scale += 0.1; // Increase scale by 0.1 on each click
+            button.style.transform = `scale(${scale})`; // Apply scale transform
+        });
+    </script>
+</body>
+</html>
+
+</html>
+
+  
+ 
+
+
+
+
+</body>
+</html>
